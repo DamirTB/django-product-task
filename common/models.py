@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 import datetime
+from django.utils.translation import gettext_lazy as _
 
 class Base(models.Model):
     order = models.IntegerField(_('Sorting'), default=0,
