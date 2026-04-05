@@ -1,0 +1,142 @@
+[
+  {
+    "model": "product.product",
+    "pk": 1,
+    "fields": {
+      "order": 0,
+      "is_active": true,
+      "is_deleted": false,
+      "name": "MacBook Pro 14",
+      "description": "Apple M3 Pro chip, 18GB RAM, 512GB SSD. Perfect for developers and designers.",
+      "price": "2499.99",
+      "image": "",
+      "category": "laptops"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 2,
+    "fields": {
+      "order": 0,
+      "is_active": true,
+      "is_deleted": false,
+      "name": "Dell XPS 15",
+      "description": "Intel Core i9, 32GB RAM, 1TB SSD, OLED touch display.",
+      "price": "1899.99",
+      "image": "",
+      "category": "laptops"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 3,
+    "fields": {
+      "order": 0,
+      "is_active": true,
+      "is_deleted": false,
+      "name": "iPhone 15 Pro",
+      "description": "A17 Pro chip, 256GB, titanium design with USB-C and Action Button.",
+      "price": "1199.99",
+      "image": "",
+      "category": "smartphones"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 4,
+    "fields": {
+      "order": 0,
+      "is_active": true,
+      "is_deleted": false,
+      "name": "Samsung Galaxy S24 Ultra",
+      "description": "Snapdragon 8 Gen 3, 12GB RAM, 512GB, built-in S Pen.",
+      "price": "1299.99",
+      "image": "",
+      "category": "smartphones"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 5,
+    "fields": {
+      "order": 0,
+      "is_active": true,
+      "is_deleted": false,
+      "name": "Sony WH-1000XM5",
+      "description": "Industry-leading noise cancelling headphones with 30-hour battery life.",
+      "price": "349.99",
+      "image": "",
+      "category": "audio"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 6,
+    "fields": {
+      "order": 0,
+      "is_active": true,
+      "is_deleted": false,
+      "name": "AirPods Pro 2",
+      "description": "Active noise cancellation, adaptive transparency, MagSafe charging case.",
+      "price": "249.99",
+      "image": "",
+      "category": "audio"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 7,
+    "fields": {
+      "order": 0,
+      "is_active": true,
+      "is_deleted": false,
+      "name": "LG 27GP850-B",
+      "description": "27\" QHD Nano IPS gaming monitor, 165Hz, 1ms response time.",
+      "price": "449.99",
+      "image": "",
+      "category": "monitors"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 8,
+    "fields": {
+      "order": 0,
+      "is_active": true,
+      "is_deleted": false,
+      "name": "Samsung Odyssey G7",
+      "description": "32\" curved QLED gaming monitor, 240Hz, 1ms, HDMI 2.1.",
+      "price": "699.99",
+      "image": "",
+      "category": "monitors"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 9,
+    "fields": {
+      "order": 0,
+      "is_active": true,
+      "is_deleted": false,
+      "name": "Logitech MX Master 3S",
+      "description": "Advanced wireless mouse, 8000 DPI, silent clicks, USB-C charging.",
+      "price": "99.99",
+      "image": "",
+      "category": "accessories"
+    }
+  },
+  {
+    "model": "product.product",
+    "pk": 10,
+    "fields": {
+      "order": 0,
+      "is_active": true,
+      "is_deleted": false,
+      "name": "Keychron K2 Pro",
+      "description": "Compact wireless mechanical keyboard, hot-swappable, RGB backlight.",
+      "price": "119.99",
+      "image": "",
+      "category": "accessories"
+    }
+  }
+]
