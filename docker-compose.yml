@@ -24,8 +24,10 @@ services:
     restart: unless-stopped
     volumes:
       - .:/usr/src/app
+      - media_files:/usr/src/app/media
     depends_on:
       - db
 
 volumes:
   postgresql_db:
+  media_files:

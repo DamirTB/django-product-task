@@ -12,7 +12,7 @@ class Product(Base):
     decimal_places=2,
     validators=[MinValueValidator(Decimal("0.01"))])
   
-  image = models.ImageField()
+  image = models.ImageField(upload_to="products/", blank=True)
   category = models.CharField(null=False, blank=False, max_length=255)
 
   def __str__(self):
