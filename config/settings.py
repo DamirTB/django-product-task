@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'django_filters',
+    'drf_spectacular',
     'apps.product',
 ]
 
@@ -52,6 +53,13 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
         'rest_framework.filters.OrderingFilter',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Product & Cart API',
+    'DESCRIPTION': 'API for managing products and shopping cart',
+    'VERSION': '1.0.0',
 }
 
 MIDDLEWARE = [
