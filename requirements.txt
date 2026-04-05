@@ -8,6 +8,9 @@ click==8.3.0
 Django==5.2.12
 django-filter==25.2
 djangorestframework==3.17.1
+dj-rest-auth==7.2.0
+djangorestframework-simplejwt==5.5.1
+PyJWT==2.12.1
 django-cors-headers==4.9.0
 drf-spectacular==0.29.0
 dnspython==2.8.0
