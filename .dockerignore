@@ -1,0 +1,64 @@
+# Git
+.git
+.gitignore
+
+# GitHub Actions
+.github
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyo
+
+# Virtual environments
+.venv
+venv/
+env/
+ENV/
+
+# Django runtime files
+db.sqlite3
+db.sqlite3-journal
+*.log
+media/
+staticfiles/
+
+# Environment / secrets
+.env
+.env.*
+
+# Tests & coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/
+.tox/
+.nox/
+
+# Type checkers & linters
+.mypy_cache/
+.dmypy.json
+.ruff_cache/
+.pytype/
+.pyre/
+
+# Build / packaging artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+wheels/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docs
+docs/
+README.md
