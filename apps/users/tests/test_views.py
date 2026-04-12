@@ -5,7 +5,7 @@ from rest_framework.test import APITestCase
 
 User = get_user_model()
 
-REGISTER_URL = reverse('auth-register')
+REGISTER_URL = reverse('rest_register')
 LOGIN_URL = reverse('rest_login')
 LOGOUT_URL = reverse('rest_logout')
 USER_URL = reverse('rest_user_details')
@@ -30,8 +30,8 @@ VALID_REGISTER_DATA = {
     'username': 'newuser',
     'first_name': 'New',
     'last_name': 'User',
-    'password': 'StrongPass123!',
-    'password_confirm': 'StrongPass123!',
+    'password1': 'StrongPass123!',
+    'password2': 'StrongPass123!',
 }
 
 
@@ -63,7 +63,7 @@ class RegisterViewTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_mismatched_passwords_returns_400(self):
-        data = {**VALID_REGISTER_DATA, 'password_confirm': 'DifferentPass!'}
+        data = {**VALID_REGISTER_DATA, 'password2': 'DifferentPass!'}
         response = self.client.post(REGISTER_URL, data)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
@@ -73,7 +73,7 @@ class RegisterViewTests(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
     def test_weak_password_returns_400(self):
-        data = {**VALID_REGISTER_DATA, 'password': '123', 'password_confirm': '123'}
+        data = {**VALID_REGISTER_DATA, 'password1': '123', 'password2': '123'}
         response = self.client.post(REGISTER_URL, data)
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
 
