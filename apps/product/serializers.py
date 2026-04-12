@@ -1,7 +1,12 @@
 from decimal import Decimal
 from rest_framework import serializers
-from drf_spectacular.utils import extend_schema_field
+from drf_spectacular.utils import extend_schema_field, inline_serializer
 from .models import Product, Cart, CartItem
+
+error_response_schema = inline_serializer(
+    name="ErrorResponse",
+    fields={"error": serializers.CharField()},
+)
 
 
 class ProductSerializer(serializers.ModelSerializer):
