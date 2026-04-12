@@ -40,10 +40,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'rest_framework',
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'dj_rest_auth',
+    'dj_rest_auth.registration',
     'django_filters',
     'drf_spectacular',
     'corsheaders',
@@ -52,6 +57,17 @@ INSTALLED_APPS = [
 ]
 
 AUTH_USER_MODEL = 'users.User'
+
+SITE_ID = 1
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_LOGIN_METHODS = {'email'}
+ACCOUNT_SIGNUP_FIELDS = ['email*', 'username*', 'password1*', 'password2*']
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'common.pagination.CustomPageNumberPagination',
@@ -83,6 +99,7 @@ REST_AUTH = {
     'JWT_AUTH_HTTPONLY': False,
     'TOKEN_MODEL': None,
     'USER_DETAILS_SERIALIZER': 'apps.users.serializers.UserSerializer',
+    'REGISTER_SERIALIZER': 'apps.users.serializers.RegisterSerializer',
 }
 
 SPECTACULAR_SETTINGS = {
@@ -100,6 +117,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
