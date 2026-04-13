@@ -201,5 +201,6 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = []
+CORS_DOMAIN = os.getenv("CORS_DOMAIN", "").strip()
+CORS_ALLOWED_ORIGINS = [CORS_DOMAIN] if CORS_DOMAIN else []
 CORS_ALLOW_ALL_ORIGINS = DEBUG == "True" or DEBUG is True
